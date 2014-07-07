@@ -1,0 +1,27 @@
+<h1>Listing movie_rentals</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Userid</th>
+      <th>Movieid</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @movie_rentals.each do |movie_rental| %>
+      <tr>
+        <td><%= movie_rental.userid %></td>
+        <td><%= movie_rental.movieid %></td>
+        <td><%= link_to 'Show', movie_rental %></td>
+        <td><%= link_to 'Edit', edit_movie_rental_path(movie_rental) %></td>
+        <td><%= link_to 'Destroy', movie_rental, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Movie rental', new_movie_rental_path %>
