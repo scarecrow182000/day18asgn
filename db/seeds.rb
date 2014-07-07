@@ -25,7 +25,7 @@ george = User.create name: "George Clooney"
 # MovieRental.new().rent()
 
 harry.movies << temple
-gold.movies << sean
-fava.movies << tony
-fashion.movies << meryl
-ocean.movies << george
+gold.users << sean
+fava.users << tony
+fashion.users << meryl
+ocean.users << george

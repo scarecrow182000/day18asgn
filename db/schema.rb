@@ -14,8 +14,8 @@
 ActiveRecord::Schema.define(version: 20140703190531) do
 
   create_table "movie_rentals", force: true do |t|
-    t.string   "userid"
-    t.string   "movieid"
+    t.integer  "user_id"
+    t.integer  "movie_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -28,7 +28,6 @@ ActiveRecord::Schema.define(version: 20140703190531) do
   end
 
   create_table "users", force: true do |t|
-    t.string   "userid"
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
